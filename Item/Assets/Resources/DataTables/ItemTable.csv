@@ -1,0 +1,6 @@
+Id,Sprite,Name,Type,Damage,Effect,Defense
+SWORD,Resources/Icon_Sword01,칼,Weapon,10,,
+BOW,Resources/Icon_Bow01,활,Weapon,5,,
+HEART,Resources/Icon_Heart01,물약,Expendables,,30,
+HELMET,Resources/Icon_Helmet01,투구,Armor,,,5
+SHIELD,Resources/Icon_Shield01,방패,Armor,,,10
