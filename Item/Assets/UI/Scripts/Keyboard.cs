@@ -17,8 +17,8 @@ public class Keyboard : GenericWindow
     public Button[] buttons;
     private string text;
     private bool iscursor = true;
-    public float timer = 0;
-    public float maxtimer = 10f;
+    private float timer = 0;
+    private float maxtimer = 0.5f;
 
     protected void Awake()
     {
@@ -42,13 +42,7 @@ public class Keyboard : GenericWindow
     {
         timer += Time.deltaTime;
        
-        if (timer >= maxtimer && iscursor)
-        {
-            iscursor = !iscursor;
-            cursor.text = iscursor ? "_" : "";
-            timer = 0;
-        }
-        else
+        if (timer >= maxtimer)
         {
             iscursor = !iscursor;
             cursor.text = iscursor ? "_" : "";

@@ -6,6 +6,9 @@ public static class DataTableManger
 {
     private static readonly Dictionary<string, DataTable> tables =
         new Dictionary<string, DataTable>();
+    private static readonly Dictionary<string, DataTable> dtables = 
+        new Dictionary<string, DataTable>();
+
 
     static DataTableManger()
     {
@@ -30,6 +33,10 @@ public static class DataTableManger
         var itemTable = new ItemTable();
         itemTable.Load(DataTableIds.Item);
         tables.Add(DataTableIds.Item, itemTable);
+
+        var diffyTable = new DifficultyTable();
+        diffyTable.Load(DataTableIds.Difficulty);
+        dtables.Add(DataTableIds.Difficulty, diffyTable);
     }
 
     public static StringTable StringTable
@@ -45,6 +52,14 @@ public static class DataTableManger
         get
         {
             return Get<ItemTable>(DataTableIds.Item);
+        }
+    }
+
+    public static DifficultyTable DifficultyTable
+    {
+        get
+        {
+            return Get<DifficultyTable>(DataTableIds.Difficulty);
         }
     }
 

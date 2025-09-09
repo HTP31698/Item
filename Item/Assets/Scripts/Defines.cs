@@ -19,6 +19,7 @@ public static class DataTableIds
     public static string String => StringTableIds[(int)Variables.Language];
 
     public static readonly string Item = "ItemTable";
+    public static readonly string Difficulty = "DifficultyTable";
 }
 
 
